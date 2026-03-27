@@ -46,24 +46,32 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
-  @apply antialiased selection:bg-blue-100 selection:text-blue-900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Base Headings */
 h1, h2, h3, h4 {
   font-family: var(--font-sans);
   color: var(--brand-primary);
-  @apply tracking-tight leading-tight;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
 }
 
-h1 { @apply font-black; }
-h2, h3 { @apply font-bold; }
+h1 { font-weight: 900; }
+h2, h3 { font-weight: 700; }
 
-/* Section Transitions */
 section {
-  @apply relative;
+  position: relative;
 }
 
-/* Custom Utilities */
+/* Selection Styles */
+::selection {
+  background-color: #dbeafe; /* blue-100 */
+  color: #1e3a8a; /* blue-900 */
+}
+
+/* Custom Container Utility */
 @utility container-custom {
   max-width: var(--spacing-container);
   margin-left: auto;
@@ -72,12 +80,7 @@ section {
   padding-right: 1.5rem;
 }
 
-/* Hover Effects */
-.card-hover {
-  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-accent/5;
-}
-
-/* Focus visible */
+/* Focus Styling */
 :focus-visible {
   outline: 2px solid var(--brand-accent);
   outline-offset: 2px;
