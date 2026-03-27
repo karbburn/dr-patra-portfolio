@@ -113,23 +113,29 @@ export default function ContactPage() {
           </Card>
         </div>
 
-        {/* Right Column: Collaboration (Fixed Contrast Bug) */}
+        {/* Right Column: Collaboration (Rebuilt for Cohesion) */}
         <div className="lg:col-span-5 h-full">
-          <div className="h-full flex flex-col justify-between rounded-3xl bg-brand-primary p-10 md:p-12 text-brand-primary-fg shadow-xl ring-1 ring-zinc-900/5 dark:ring-white/10">
-            <div>
-              <h2 className="mb-6 text-3xl font-bold tracking-tight">Collaboration</h2>
-              <div className="space-y-6 opacity-90 text-lg leading-relaxed">
+          <Card 
+            hover
+            className="h-full border-l-4 border-l-brand-accent bg-gradient-to-br from-white to-zinc-50 dark:from-zinc-900/50 dark:to-zinc-900/10 p-10 md:p-12"
+          >
+            <div className="mb-10">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent">
+                <Globe size={24} />
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-brand-primary uppercase tracking-widest text-sm">Collaboration & Consulting</h2>
+              <div className="mt-6 space-y-6 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
                 <p>
                   {profile.collaboration.intro}
                 </p>
                 
-                <div className="pt-4">
-                  <h3 className="font-bold mb-4 uppercase tracking-wider text-sm opacity-80">Key Areas of Interest</h3>
-                  <ul className="space-y-3">
+                <div className="pt-6">
+                  <h3 className="mb-6 font-bold uppercase tracking-widest text-xs text-brand-accent">Key Research Frontiers</h3>
+                  <ul className="space-y-4">
                     {profile.collaboration.areas.map((area, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <div className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-current opacity-60" />
-                        <span>{area}</span>
+                      <li key={idx} className="group/item flex items-start gap-4">
+                        <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-accent transition-transform group-hover/item:scale-150" />
+                        <span className="text-base font-medium transition-colors group-hover/item:text-brand-primary">{area}</span>
                       </li>
                     ))}
                   </ul>
@@ -137,12 +143,12 @@ export default function ContactPage() {
               </div>
             </div>
             
-            <div className="mt-16 pt-8 border-t border-current/20">
-              <p className="text-xl md:text-2xl font-medium italic opacity-95 text-balance">
+            <div className="mt-12 pt-8 border-t border-zinc-100 dark:border-zinc-800">
+              <p className="text-xl md:text-2xl font-serif italic text-zinc-500 dark:text-zinc-400 leading-snug">
                 {'"'}{profile.collaboration.quote.replace(/"/g, '')}{'"'}
               </p>
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </div>
