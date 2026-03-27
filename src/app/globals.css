@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Adaptive Semantic Tokens */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-fg: var(--brand-primary-fg);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-muted: var(--brand-muted);
+  
+  --spacing-container: 80rem;
+}
+
+:root {
+  /* Light Mode - Neutral & Clean */
+  --background: #f8fafc;
+  --foreground: #0f172a; /* Slate 900 */
+  
+  --brand-primary: #0f172a; /* Slate 900 */
+  --brand-primary-fg: #ffffff;
+  --brand-accent: #3b82f6; /* Classic Blue */
+  --brand-muted: #f1f5f9; /* Slate 100 */
+  
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Mode - High Contrast & Natural */
+    --background: #09090b; /* Zinc 950 */
+    --foreground: #f4f4f5; /* Zinc 100 */
+    
+    --brand-primary: #f4f4f5; /* Zinc 100 */
+    --brand-primary-fg: #09090b; /* Zinc 950 */
+    --brand-accent: #60a5fa; /* Light Blue */
+    --brand-muted: #27272a; /* Zinc 800 */
+    
+    --card-bg: rgba(24, 24, 27, 0.6); /* Zinc 900 with opacity */
+    --card-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  @apply antialiased selection:bg-blue-100 selection:text-blue-900;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  color: var(--brand-primary);
+  @apply tracking-tight leading-tight;
+}
+
+h1 { @apply font-black; }
+h2, h3 { @apply font-bold; }
+
+/* Section Transitions */
+section {
+  @apply relative;
+}
+
+/* Custom Utilities */
+@utility container-custom {
+  max-width: var(--spacing-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Hover Effects */
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-accent/5;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 2px;
+}
