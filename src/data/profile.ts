@@ -1,3 +1,50 @@
+// IMPORTANT - HOW TO EDIT THIS FILE:
+// =====================================================
+// Only edit text inside quotes.
+// Do NOT change structure or brackets.
+
+// ----------------------------------------------------
+// HOW TO ADD A NEW PUBLICATION (Journal Article):
+// ----------------------------------------------------
+// Add to publications array (around line 150):
+// {
+//   id: 'pub-26',          // Unique ID (increment: pub-27, pub-28...)
+//   type: 'journal',
+//   title: 'Paper Title',
+//   authors: ['Dr. S.P. Bhargava', 'Co-author Name'],
+//   journalOrPublisher: 'Journal Name',
+//   year: 2024,
+//   doi: 'https://doi.org/...',  // Optional
+//   category: 'A'               // 'A', 'B', 'C', or 'SCOPUS'
+// },
+
+// ----------------------------------------------------
+// HOW TO ADD A NEW BOOK CHAPTER:
+// ----------------------------------------------------
+// Add to bookChapters array:
+// {
+//   id: 'bc-4',
+//   type: 'book',
+//   title: 'Chapter Title',
+//   authors: ['Dr. S.P. Bhargava', 'Co-author'],
+//   journalOrPublisher: 'Book Publisher',
+//   year: 2024,
+//   doi: 'https://...'
+// },
+
+// ----------------------------------------------------
+// HOW TO ADD A NEW PATENT:
+// ----------------------------------------------------
+// 1. Upload PDF to: public/Patents/IN-{number}_B.pdf
+// 2. Add to patents array:
+// {
+//   id: 'pat-26',
+//   title: 'Patent Title',
+//   patentNumber: 'IN123456',
+//   grantDate: '1st January 2024',
+//   pdfUrl: '/Patents/IN-123456_B.pdf'
+// },
+
 import { Profile, Publication, Experience, Patent, Education, Course, Skill, Language } from '@/types';
 
 export const profile: Profile = {
