@@ -6,75 +6,157 @@ Official portfolio website for Dr. Soumya Prakash Bhargava, Assistant Professor 
 
 ---
 
-## Quick Start
+## Quick Start (For Developers)
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view.
+Open [http://localhost:3000](http://localhost:3000) to view locally.
 
 ---
 
-## How to Edit This Website
+## How to Edit This Website (GitHub Web)
 
-All website data is in a single file: **`src/data/profile.ts`**
+You can edit this website directly from your browser using GitHub's web interface - no technical setup required!
 
-### What's in profile.ts
+### Step-by-Step Guide
 
-| Section | What You Can Update |
-|---------|---------------------|
-| **Profile Info** | Name, title, institution, bio, email, phone, address |
-| **Research Interests** | Add/remove interests |
-| **Publications** | Add new journal articles |
-| **Book Chapters** | Add new book chapters |
-| **Patents** | Add new patents |
-| **Experience** | Add work history |
-| **Education** | Add degrees |
-| **Courses** | Add courses you teach |
-| **Skills** | Add expertise areas |
-| **Stats** | Publications count, patents count, years experience |
+**Step 1: Go to the File**
+1. Open: https://github.com/karbburn/dr-patra-portfolio
+2. Click the **"Go to file"** button (near the top)
+3. Type: `src/data/profile.ts`
+4. Press Enter
 
-### Adding/Editing Patents
+**Step 2: Edit the File**
+1. Click the **pencil icon** (top right of the file content)
+2. Make your changes (see guidelines below)
+3. Click **"Commit changes"** (green button at bottom)
 
-When adding a new patent:
-
-1. **Upload the PDF certificate** to `public/Patents/` folder
-   - Filename format: `IN-{patent_number}_B.pdf` (e.g., `IN-560757_B.pdf`)
-
-2. **Add the patent entry** in `src/data/profile.ts`:
-   ```typescript
-   {
-     id: 'pat-XX',
-     title: 'Patent Title',
-     patentNumber: 'IN123456',
-     grantDate: '1st January 2024',
-     pdfUrl: '/Patents/IN-123456_B.pdf',
-   },
-   ```
+**Step 3: Done!**
+- The site will auto-deploy on Vercel within ~1 minute
+- Your changes will be live!
 
 ---
 
-## After Editing
+## What You Can Edit
 
-1. **Save** the file
-2. **Commit** your changes:
-   ```bash
-   git add .
-   git commit -m "Update profile data"
-   ```
-3. **Push** to GitHub:
-   ```bash
-   git push origin main
-   ```
+All website data is in **`src/data/profile.ts`**.
 
-The site **auto-deploys** on Vercel within ~1 minute.
+| Section | What You Can Update | Example |
+|---------|---------------------|---------|
+| **Name** | Your full name | `'Dr. Soumya Prakash Bhargava'` |
+| **Title** | Your job title | `'Assistant Professor'` |
+| **Institution** | Where you work | `'IIM Bodh Gaya'` |
+| **Bio** | Your biography | Edit the text inside backticks |
+| **Email** | Your email | `'email@example.com'` |
+| **Research Interests** | Add/remove interests | Edit the list in brackets |
+| **Publications** | Add journal articles | Add entries to publications array |
+| **Book Chapters** | Add book chapters | Add entries to bookChapters array |
+| **Patents** | Add patents | Add entries to patents array |
+
+---
+
+## IMPORTANT: How to Edit Safely
+
+### ❌ What NOT to Do
+- Do NOT add or remove brackets `{ }`
+- Do NOT add or remove square brackets `[ ]`
+- Do NOT add or remove parentheses `( )`
+- Do NOT add or remove commas `,`
+- Do NOT change text outside of quotes `' '` or backticks `` ` ` ``
+
+### ✅ What You CAN Do
+- Change text **inside quotes**: `'Old Name'` → `'New Name'`
+- Change text **inside backticks**: `` `old text` `` → `` `new text` ``
+- Add new items to an existing list (follow the same pattern)
+
+### Examples
+
+| You Want to Change | Correct | Wrong |
+|--------------------|---------|-------|
+| Change name | `name: 'New Name'` | `name: { value: 'New Name' }` |
+| Change title | `title: 'Professor'` | `title: ('Professor')` |
+| Add interest | `'New Interest',` (in list) | Add new brackets |
+
+---
+
+## How to Add New Publications
+
+Find the `publications` array in the file and add a new entry following this format:
+
+```typescript
+{
+  id: 'pub-26',
+  type: 'journal',
+  title: 'Your Paper Title',
+  authors: ['Dr. S.P. Bhargava', 'Co-author Name'],
+  journalOrPublisher: 'Journal Name',
+  year: 2024,
+  doi: 'https://doi.org/...',
+  category: 'A'
+},
+```
+
+**Category options**: `'A'`, `'B'`, `'C'`, or `'SCOPUS'`
+
+---
+
+## How to Add New Book Chapters
+
+Find the `bookChapters` array and add:
+
+```typescript
+{
+  id: 'bc-4',
+  type: 'book',
+  title: 'Your Chapter Title',
+  authors: ['Dr. S.P. Bhargava', 'Co-author'],
+  journalOrPublisher: 'Book Publisher',
+  year: 2024,
+  doi: 'https://doi.org/...'
+},
+```
+
+---
+
+## How to Add New Patents
+
+**Step 1: Upload the PDF**
+- Upload the patent certificate PDF to the `public/Patents/` folder
+- Filename format: `IN-{number}_B.pdf` (e.g., `IN-560757_B.pdf`)
+
+**Step 2: Add the Patent Entry**
+
+Find the `patents` array and add:
+
+```typescript
+{
+  id: 'pat-26',
+  title: 'Patent Title',
+  patentNumber: 'IN123456',
+  grantDate: '1st January 2024',
+  pdfUrl: '/Patents/IN-123456_B.pdf'
+},
+```
+
+---
+
+## After Editing (Summary)
+
+1. Click **"Commit changes"** (green button)
+2. Add a short commit message (e.g., "Update publications")
+3. Click **"Commit changes"**
+4. Wait ~1 minute for Vercel to deploy
+5. Check your live site!
 
 ---
 
 ## Questions?
 
-Contact: [your email]
+Contact: karbburn@gmail.com
+
+---
 
 Built with Next.js + Tailwind CSS
