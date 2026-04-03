@@ -131,7 +131,7 @@ export const profile: Profile = {
     iimProfileLabel: 'View Faculty Page',
   },
   collaboration: {
-    intro: 'Dr. Patra is available for academic collaboration, research partnerships, speaking engagements, and expert consulting on intellectual property matters.',
+    intro: 'Dr. Bhargava is available for academic collaboration, research partnerships, speaking engagements, and expert consulting on intellectual property matters.',
     areas: [
       'Patent law and Standard Essential Patents (SEPs)',
       'Corporate governance and business regulations',
