@@ -4,7 +4,7 @@ import Timeline from "@/components/features/Timeline";
 import Card from "@/components/ui/Card";
 
 export const metadata: Metadata = {
-  title: "Experience | Dr. Soumya Prakash Patra",
+  title: "Experience | Dr. Soumya Prakash Bhargava",
   description: "8+ years experience: IIM Bodh Gaya Assistant Professor, St. Xavier's Kolkata, and 13 years at Indian Patent Office. 25 granted patents.",
 };
 

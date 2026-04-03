@@ -6,7 +6,7 @@ import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "About | Dr. Soumya Prakash Patra",
+  title: "About | Dr. Soumya Prakash Bhargava",
   description: "Assistant Professor of Law & IPR at IIM Bodh Gaya. Expert in Patents, Corporate Laws, Business Regulations, and Standard Essential Patents.",
 };
 

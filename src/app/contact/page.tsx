@@ -1,11 +1,11 @@
-import { Mail, Linkedin, MapPin, Phone, Globe, ArrowRight } from "lucide-react";
+import { Mail, Linkedin, MapPin, Globe, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import { profile } from "@/data/profile";
 import Card from "@/components/ui/Card";
 
 export const metadata: Metadata = {
-  title: "Contact | Dr. Soumya Prakash Patra",
-  description: "Contact IIM Bodh Gaya. Email: som.iitkgp@gmail.com, Phone: +91 8895790331. Available for academic collaboration and consulting.",
+  title: "Contact | Dr. Soumya Prakash Bhargava",
+  description: "Contact IIM Bodh Gaya. Email: som.iitkgp@gmail.com. Available for academic collaboration and consulting.",
 };
 
 export default function ContactPage() {
@@ -42,22 +42,6 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              {/* Phone */}
-              <div className="group flex items-start gap-5">
-                <div className="mt-1 flex-shrink-0 rounded-xl bg-zinc-100 p-3.5 text-zinc-600 transition-colors group-hover:bg-brand-primary group-hover:text-brand-primary-fg dark:bg-zinc-800/50 dark:text-zinc-400">
-                  <Phone size={22} className="stroke-[1.5]" />
-                </div>
-                <div>
-                  <div className="mb-1 text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Phone Directory</div>
-                  <a 
-                    href={`tel:${profile.phone.replace(/\s/g, '')}`} 
-                    className="text-lg md:text-xl font-medium text-brand-primary group-hover:text-brand-accent transition-colors"
-                  >
-                    {profile.phone}
-                  </a>
-                </div>
-              </div>
-
               {/* Profiles */}
               <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800 grid sm:grid-cols-2 gap-6">
                 {profile.linkedin && (

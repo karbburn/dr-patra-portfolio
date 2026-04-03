@@ -4,4 +4,5 @@ export interface Patent {
   patentNumber: string;
   grantDate: string;
   description?: string;
+  pdfUrl?: string;
 }

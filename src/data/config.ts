@@ -12,8 +12,8 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: 'Dr. Soumya Prakash Patra',
-  title: 'Dr. Soumya Prakash Patra | Professor of Law & IPR',
+  name: 'Dr. Soumya Prakash Bhargava',
+  title: 'Dr. Soumya Prakash Bhargava | Professor of Law & IPR',
   description: 'Assistant Professor of Law & IPR at IIM Bodh Gaya. Expert in Patents, Corporate Laws, and Business Regulations.',
   url: 'https://soumyaprakashpatra.com',
   institution: 'IIM Bodh Gaya',

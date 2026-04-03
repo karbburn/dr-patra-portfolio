@@ -1,4 +1,4 @@
-export const APP_NAME = 'Dr. Soumya Prakash Patra';
+export const APP_NAME = 'Dr. Soumya Prakash Bhargava';
 export const APP_DESCRIPTION = 'Assistant Professor of Law & IPR at IIM Bodh Gaya';
 
 export const YEAR = new Date().getFullYear();

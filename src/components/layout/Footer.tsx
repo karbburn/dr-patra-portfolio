@@ -64,7 +64,7 @@ export default function Footer() {
       </div>
       
       <div className="container-custom mt-12 border-t border-zinc-200 pt-8 text-center text-xs text-zinc-400 dark:border-zinc-800">
-        © {YEAR} {siteConfig.name}. All rights reserved. Built by Sourabh.
+        © {YEAR} {siteConfig.name}. All rights reserved.
       </div>
     </footer>
   );

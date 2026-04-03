@@ -11,14 +11,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Soumya Prakash Patra | Professor of Law & IPR",
+  title: "Dr. Soumya Prakash Bhargava | Professor of Law & IPR",
   description: "Assistant Professor of Law & IPR at IIM Bodh Gaya. Expert in Patents, Corporate Laws, and Business Regulations.",
   metadataBase: new URL('https://dr-patra-portfolio.vercel.app'),
   openGraph: {
-    title: 'Dr. Soumya Prakash Patra | Professor of Law & IPR',
+    title: 'Dr. Soumya Prakash Bhargava | Professor of Law & IPR',
     description: 'Assistant Professor of Law & IPR at IIM Bodh Gaya. Expert in Patents, Corporate Laws, and Standard Essential Patents.',
     url: 'https://dr-patra-portfolio.vercel.app',
-    siteName: 'Dr. Soumya Prakash Patra',
+    siteName: 'Dr. Soumya Prakash Bhargava',
     locale: 'en_US',
     type: 'website',
   },
@@ -44,7 +44,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Dr. Soumya Prakash Patra",
+              "name": "Dr. Soumya Prakash Bhargava",
               "jobTitle": "Assistant Professor",
               "worksFor": {
                 "@type": "Organization",

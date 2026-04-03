@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ResearchTabs from "@/components/features/ResearchTabs";
 
 export const metadata: Metadata = {
-  title: "Research | Dr. Soumya Prakash Patra",
+  title: "Research | Dr. Soumya Prakash Bhargava",
   description: "Publications in ABDC journals, book chapters, and 25+ granted patents on Standard Essential Patents and automotive innovations.",
 };
 

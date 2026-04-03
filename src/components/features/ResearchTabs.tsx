@@ -1,7 +1,7 @@
 "use client";
 
 import { publications, bookChapters, patents } from "@/data/profile";
-import { ExternalLink, Award } from "lucide-react";
+import { ExternalLink, Award, FileText } from "lucide-react";
 import { useState } from "react";
 import Card from "@/components/ui/Card";
 
@@ -174,14 +174,29 @@ export default function ResearchTabs() {
                   <th className="pb-3 text-left font-medium text-zinc-500">Patent Title</th>
                   <th className="pb-3 text-left font-medium text-zinc-500">Patent Number</th>
                   <th className="pb-3 text-left font-medium text-zinc-500">Grant Date</th>
+                  <th className="pb-3 text-left font-medium text-zinc-500">Certificate</th>
                 </tr>
               </thead>
               <tbody>
                 {patents.map((patent) => (
-                  <tr key={patent.id} className="border-b border-zinc-100 dark:border-zinc-900">
+                  <tr key={patent.id} className="border-b border-zinc-100 dark:border-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors">
                     <td className="py-4 pr-4">{patent.title}</td>
                     <td className="py-4 pr-4 font-mono text-zinc-500">{patent.patentNumber}</td>
                     <td className="py-4 text-zinc-400">{patent.grantDate}</td>
+                    <td className="py-4">
+                      {patent.pdfUrl && (
+                        <a 
+                          href={patent.pdfUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View certificate for ${patent.patentNumber}`}
+                          className="inline-flex items-center gap-1.5 text-xs font-medium text-brand-primary hover:text-brand-accent transition-colors cursor-pointer"
+                        >
+                          <FileText size={14} />
+                          View
+                        </a>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>

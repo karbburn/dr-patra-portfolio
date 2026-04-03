@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dr. Soumya Prakash Bhargava Portfolio
 
-## Getting Started
+Official portfolio website for Dr. Soumya Prakash Bhargava, Assistant Professor of Law & IPR at IIM Bodh Gaya.
 
-First, run the development server:
+**Live Site**: https://dr-patra-portfolio.vercel.app
+
+---
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Edit This Website
 
-## Learn More
+All website data is in a single file: **`src/data/profile.ts`**
 
-To learn more about Next.js, take a look at the following resources:
+### What's in profile.ts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Section | What You Can Update |
+|---------|---------------------|
+| **Profile Info** | Name, title, institution, bio, email, phone, address |
+| **Research Interests** | Add/remove interests |
+| **Publications** | Add new journal articles |
+| **Book Chapters** | Add new book chapters |
+| **Patents** | Add new patents |
+| **Experience** | Add work history |
+| **Education** | Add degrees |
+| **Courses** | Add courses you teach |
+| **Skills** | Add expertise areas |
+| **Stats** | Publications count, patents count, years experience |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Adding/Editing Patents
 
-## Deploy on Vercel
+When adding a new patent:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Upload the PDF certificate** to `public/Patents/` folder
+   - Filename format: `IN-{patent_number}_B.pdf` (e.g., `IN-560757_B.pdf`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Add the patent entry** in `src/data/profile.ts`:
+   ```typescript
+   {
+     id: 'pat-XX',
+     title: 'Patent Title',
+     patentNumber: 'IN123456',
+     grantDate: '1st January 2024',
+     pdfUrl: '/Patents/IN-123456_B.pdf',
+   },
+   ```
+
+---
+
+## After Editing
+
+1. **Save** the file
+2. **Commit** your changes:
+   ```bash
+   git add .
+   git commit -m "Update profile data"
+   ```
+3. **Push** to GitHub:
+   ```bash
+   git push origin main
+   ```
+
+The site **auto-deploys** on Vercel within ~1 minute.
+
+---
+
+## Questions?
+
+Contact: [your email]
+
+Built with Next.js + Tailwind CSS
